@@ -1,0 +1,67 @@
+/***** Footer *****/
+footer {
+  background-color: #c4c4c4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+}
+footer > .inner{
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+}
+footer p {
+  z-index: 1;
+  font-size: 16px;
+  font-weight: 500;
+}
+.logo_foot {
+  width: 150px;
+}
+
+@media screen and (max-width: 1024px) {
+footer p {
+  font-size: 14px;
+}
+}
+
+@media screen and (max-width: 768px) {
+footer > .inner{
+  flex-direction: column;
+  text-align: center;
+}
+}
+
+@media screen and (max-width: 450px) {
+footer p {
+  font-size: 12px;
+}
+.logo_foot {
+  width: 120px;
+}
+}
+
+/***** Badge *****/
+.badge{
+  position: fixed;
+  width: 150px;
+  bottom: 50px; right: 50px;
+  z-index: 10;
+}
+.badge > img{
+  width: 100%;
+}
+@media screen and (max-width: 1024px){
+.badge{
+  right: 25px;
+  width: 120px;
+}
+}
+@media screen and (max-width: 768px){
+.badge{
+  display: none;
+}
+}

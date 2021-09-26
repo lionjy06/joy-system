@@ -1,0 +1,139 @@
+@import url(../../reset.css);
+@import url(../../header.css);
+@import url(../../footer.css);
+
+* {
+  font-family: "Gowun Dodum", sans-serif;
+}
+/****** Heading ******/
+.heading {
+  padding-top: 90px;
+  background: url(../images/bg.jpg) no-repeat center;
+  background-size: cover;
+  text-align: center;
+}
+.heading > h1 {
+  display: inline-block;
+  width: 300px;
+  color: #000;
+  font-weight: 500;
+  font-size: 33px;
+  line-height: 150px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.location {
+  overflow: hidden;
+}
+.location > li {
+  float: left;
+  margin: 30px 0;
+}
+.location > li::before {
+  content: ">";
+  color: #555;
+  margin: 10px;
+}
+.location > li:first-child::before {
+  content: none;
+}
+.location > li > a {
+  color: #555;
+}
+
+@media screen and (max-width: 1024px) {
+  .heading {
+    padding-top: 70px;
+  }
+  .heading > h1 {
+    font-size: 28px;
+    width: 250px;
+    line-height: 120px;
+  }
+  .location > li > a {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heading > h1 {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .heading {
+    padding-top: 50px;
+  }
+  .heading > h1 {
+    font-size: 22px;
+    width: 200px;
+    line-height: 100px;
+  }
+  .location.inner {
+    width: 90%;
+  }
+  .location > li {
+    margin: 20px 0;
+  }
+  .location > li > a {
+    font-size: 12px;
+  }
+}
+
+/******** Case ********/
+.case {
+  width: 70%;
+  margin: 15px;
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #c4c4c4;
+}
+.case-content{
+  width: 100%;
+  overflow: hidden;
+  padding: 20px;
+}
+.case h3 {
+  font-size: 22px;
+  font-weight: 500;
+  padding: 15px;
+  border-bottom: 1px solid #c4c4c4;
+}
+.case p {
+  padding-right: 15px;
+  float: left;
+  width: 50%;
+}
+.case img{
+  float: right;
+  width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .case {
+    width: 80%;
+  }
+  .case h3 {
+    font-size: 20px;
+  }
+  .case p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .case {
+    width: 90%;
+  }
+  .case h3 {
+    font-size: 16px;
+    padding: 0 0 15px 0;
+  }
+  .caseimg {
+    width: 90%;
+  }
+  .case p {
+    font-size: 14px;
+  }
+}

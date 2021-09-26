@@ -1,0 +1,274 @@
+@import url(../reset.css);
+@import url(../header.css);
+@import url(../footer.css);
+
+* {
+  font-family: "Gowun Dodum", sans-serif;
+}
+
+/****** Heading ******/
+.heading {
+  padding-top: 90px;
+  background: url(./images/bg.jpg) no-repeat center;
+  background-size: cover;
+  text-align: center;
+}
+.heading > h1 {
+  display: inline-block;
+  width: 300px;
+  color: #2383cc;
+  font-weight: 500;
+  font-size: 33px;
+  line-height: 150px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.location {
+  overflow: hidden;
+}
+.location > li {
+  float: left;
+  margin: 30px 0;
+}
+.location > li::before {
+  content: ">";
+  color: #555;
+  margin: 10px;
+}
+.location > li:first-child::before {
+  content: none;
+}
+.location > li > a {
+  color: #555;
+}
+
+@media screen and (max-width: 1024px) {
+  .heading {
+    padding-top: 70px;
+  }
+  .heading > h1 {
+    font-size: 28px;
+    width: 250px;
+    line-height: 120px;
+  }
+  .location > li > a {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heading > h1 {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .heading {
+    padding-top: 50px;
+  }
+  .heading > h1 {
+    font-size: 22px;
+    width: 200px;
+    line-height: 100px;
+  }
+  .location.inner {
+    width: 90%;
+  }
+  .location > li {
+    margin: 20px 0;
+  }
+  .location > li > a {
+    font-size: 12px;
+  }
+}
+
+/***** Products *****/
+.product {
+  width: 70%;
+  max-width: 1024px;
+  margin: auto;
+}
+.product > h2 {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 50px;
+  border-bottom: 1px solid #303030;
+}
+.items {
+  width: 100%;
+  padding-bottom: 50px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  display: grid;
+}
+.items p {
+  color: #555;
+  font-size: 17px;
+  font-weight: 600;
+}
+.items span {
+  color: #911c2c;
+  font-size: 14px;
+}
+.items li {
+  padding: 10%;
+}
+.items li a img {
+  width: 100%;
+}
+.items li a img:hover {
+  transform: scale(1.1);
+  transition: all 0.2s;
+}
+.tab > ul {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+.tab > ul > li {
+  float: left;
+  width: 50%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 40px;
+  border: 1px solid #303030;
+  cursor: pointer;
+}
+.tab > ul > li.active {
+  background-color: #303030;
+  color: #fff;
+  font-weight: 500;
+}
+.product.roof,
+.product.stand {
+  display: none;
+}
+.product.roof.active {
+  display: block;
+  background: rgba(242, 242, 233);
+  background: linear-gradient(
+    180deg,
+    rgba(242, 242, 233, 1) 30%,
+    rgba(227, 255, 250, 0.7847514005602241) 65%
+  );
+}
+.product.stand.active {
+  display: block;
+  background: rgba(242, 242, 233);
+  background: linear-gradient(
+    180deg,
+    rgba(242, 242, 233, 1) 30%,
+    rgba(227, 255, 250, 0.7847514005602241) 65%
+  );
+}
+
+@media screen and (max-width: 768px) {
+  .product {
+    width: 80%;
+  }
+  .product > h2 {
+    font-size: 22px;
+  }
+  .tab > ul > li {
+    font-size: 16px;
+  }
+  .items {
+    padding-bottom: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .items p {
+    font-size: 16px;
+  }
+  .items span {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .product {
+    width: 90%;
+  }
+  .product > h2 {
+    font-size: 20px;
+    margin: 0 5%;
+  }
+  .tab > ul > li {
+    font-size: 14px;
+    line-height: 30px;
+  }
+  .items {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  .items p {
+    font-size: 14px;
+  }
+  .items span {
+    font-size: 12px;
+  }
+}
+
+.side-container {
+  position: absolute;
+  top: 420px; left: 5%;
+  background-color: rgba(230, 230, 204, 0.9);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+aside button{
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 30px;
+}
+.side-item button{
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 20px;
+  cursor: pointer;
+}
+@media screen and (max-width: 1024px){
+  .side-container{
+    left: 10px;
+  } 
+}
+@media screen and (max-width: 768px){
+  .side-container{
+    display: none;
+  } 
+}
+.LGoneway {
+  background-color: rgba(230, 230, 204, 0.9);
+}
+
+.LGtwoway {
+  background-color: rgba(230, 230, 204, 0.8);
+}
+
+.LGfourway {
+  background-color: rgba(230, 230, 204, 0.6);
+}
+
+.LGcircle {
+  background-color: rgba(201, 218, 214, 0.6);
+}
+
+.LGmae {
+  background-color: rgba(203, 218, 214, 0.6);
+}
+
+.LGhanging {
+  background-color: rgba(170, 201, 206, 0.5);
+}
+
+.LGnormal {
+  background-color: rgba(230, 230, 204, 0.9);
+}
+
+.LGbig {
+  background-color: rgba(170, 201, 206, 0.5);
+}
+
+.LG {
+  padding-left: 5%;
+}

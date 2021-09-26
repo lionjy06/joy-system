@@ -1,0 +1,204 @@
+@import url(./reset.css);
+@import url(./header.css);
+
+* {
+  font-family: "Gowun Dodum", sans-serif;
+}
+/***** Layout *****/
+body {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 40vh 30vh 30vh;
+  grid-template-columns: 60% 40%;
+  grid-template-areas:
+    "slide slide"
+    "intro contact"
+    "intro footer";
+}
+
+/***** Banner *****/
+.slider {
+  grid-area: slide;
+  overflow: hidden;
+  margin-top: 90px;
+}
+.slide-container {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.slides {
+  width: 100vw;
+  list-style: none;
+  display: flex;
+}
+.slide {
+  width: 100vw;
+  min-width: 100vw;
+}
+
+.slide a {
+  width: 100vw;
+}
+.slide img {
+  height: 100%;
+  width: 100%;
+}
+
+/***** Company *****/
+.intro {
+  grid-area: intro;
+  background: url(./images/intro.jpg) no-repeat center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5% 0 15%;
+}
+.intro h2 {
+  font-size: 30px;
+}
+.intro p {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+}
+.intro span {
+  display: block;
+  margin-top: 20px;
+}
+.intro span:last-child {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/***** Contact *****/
+.contact {
+  grid-area: contact;
+  background-color: #88b7f0;
+  background-image: url(./images/windbg.png);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 15% 0 7%;
+}
+.contact h3 {
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+.contact p {
+  font-size: 24px;
+  line-height: 33px;
+}
+.contact span {
+  font-weight: 700;
+}
+.contact span::after {
+  content: ":";
+  margin: 0 3px;
+}
+
+/***** Footer *****/
+footer {
+  grid-area: footer;
+  background-color: #dddddd;
+  display: flex;
+  padding: 0 15% 0 7%;
+  position: relative;
+  align-items: center;
+}
+footer p {
+  z-index: 1;
+  font-size: 18px;
+}
+
+/***** Responsive *****/
+@media screen and (max-width: 1024px) {
+  h3 {
+    font-size: 18px;
+  }
+  .slider {
+    margin-top: 70px;
+  }
+  .intro h2 {
+    font-size: 24px;
+  }
+  .intro p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .intro span:last-child {
+    font-size: 16px;
+  }
+  .contact p {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  footer p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    display: block;
+  }
+  .intro,
+  .contact,
+  footer {
+    padding: 5% 10%;
+    align-items: center;
+  }
+  .contact{
+    background-position: center;
+  }
+  footer{
+    flex-direction: column;
+  }
+  footer p {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  h3 {
+    font-size: 16px;
+    padding-bottom: 5px;
+  }
+  .slider {
+    margin-top: 50px;
+  }
+  .intro h2 {
+    font-size: 20px;
+  }
+  .intro p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .intro span:last-child {
+    font-size: 14px;
+  }
+  .contact p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  footer p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 769px){
+  .slider.mobile{
+    display: none;
+  }
+}
+@media screen and (max-width: 768px){
+  .slider.pc{
+    display: none;
+  }
+}

@@ -1,0 +1,113 @@
+/***** Header *****/
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px 0px #00000024;
+  z-index: 10;
+}
+.nav {
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+}
+.mainnav {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  align-items: center;
+}
+.mainitem > a {
+  font-size: 18px;
+  font-weight: 700;
+}
+.logo {
+  height: inherit;
+}
+.logo img {
+  height: 100%;
+}
+.toggle {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 33px;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+h3 {
+  font-size: 18px;
+}
+.nav {
+  height: 70px;
+}
+.mainitem > a {
+  font-size: 16px;
+}
+}
+
+@media screen and (max-width: 768px) {
+header {
+  top: 0;
+}
+.nav {
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.mainnav {
+  position: absolute;
+  top: 70px;
+  left: -100%;
+  background-color: #fff;
+  width: 80%;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: left;
+  transition-duration: 0.3s;
+}
+.mainnav.active {
+  left: 0;
+}
+.mainitem {
+  width: 100%;
+}
+.mainitem > a {
+  display: block;
+  padding: 0 5%;
+  line-height: 50px;
+}
+.mainitem > a:hover {
+  background-color: #88b7f0;
+  color: #fff;
+  transition-duration: 0.3s;
+}
+.toggle {
+  display: block;
+}
+}
+
+@media screen and (max-width: 450px) {
+.mainnav {
+  top: 50px;
+}
+h3 {
+  font-size: 16px;
+  padding-bottom: 5px;
+}
+.nav {
+  height: 50px;
+}
+.mainitem > a {
+  font-size: 14px;
+  line-height: 40px;
+}
+}
